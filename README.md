@@ -2,6 +2,8 @@
 
 学号：**26213050215**。TypeScript 面向对象实现，使用 Command、Composite、Memento 和依赖倒置；支持六种基础图形、树编辑、SVG 读写与事务式撤销重做。
 
+仓库地址：[https://github.com/chinacodeking/svg](https://github.com/chinacodeking/svg)
+
 ## 启动与验证
 
 需要 Node.js 22 或更新版本、npm。
