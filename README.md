@@ -73,4 +73,4 @@ save demo.svg
 
 ## 项目文档
 
-[doc/README.md](doc/README.md) 包含架构方案、PlantUML 组件图、设计模式、依赖规则、变化点、真实过程记录、一致性自查和验证依据。示例输入见 [examples/](examples/)。
+[doc/README.md](doc/README.md) 包含架构方案、PlantUML 组件图、设计模式、依赖规则、变化点、开发迭代记录、一致性自查和验证依据。示例输入见 [examples/](examples/)。
