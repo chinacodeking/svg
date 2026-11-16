@@ -1,0 +1,23 @@
+@startuml
+skinparam componentStyle rectangle
+component main
+package presentation
+package application {
+  interface DocumentStore
+  component EditorSession
+  component "Command / EditCommand"
+  component CommandHistory
+}
+package domain
+package infrastructure
+main --> presentation
+main --> application
+main --> infrastructure
+presentation --> application
+application --> domain
+infrastructure --> domain
+infrastructure ..|> DocumentStore
+EditorSession --> DocumentStore
+EditorSession --> CommandHistory
+"Command / EditCommand" --> EditorSession
+@enduml
