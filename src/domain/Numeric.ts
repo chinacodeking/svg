@@ -1,10 +1,12 @@
 export class Numeric {
   static parse(value: string, name: string): number {
-    if (!/^[+-]?(?:\d+\.?\d*|\.\d+)(?:[eE][+-]?\d+)?$/.test(value)) throw new Error(`invalid number for ${name}: ${value}`);
+    if (!/^[+-]?(?:\d+\.?\d*|\.\d+)(?:[eE][+-]?\d+)?$/.test(value))
+      throw new Error(`invalid number for ${name}: ${value}`);
     return this.finite(Number(value), name);
   }
   static finite(value: number, name: string): number {
-    if (!Number.isFinite(value)) throw new Error(`invalid number for ${name}: ${value}`);
+    if (!Number.isFinite(value))
+      throw new Error(`invalid number for ${name}: ${value}`);
     return Object.is(value, -0) ? 0 : value;
   }
   static nonnegative(value: number, name: string): number {

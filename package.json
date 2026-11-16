@@ -3,13 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "cli": "npm run build --silent && node dist/src/main.js",
     "test": "npm run build --silent && node --test dist/test/*.test.js",
-    "check": "npm run test && node dist/test/ArchitectureCheck.js"
+    "check": "npm run test && node dist/test/ArchitectureCheck.js && npm run format:check",
+    "format": "prettier --write src test doc README.md package.json tsconfig.json",
+    "format:check": "prettier --check src test doc README.md package.json tsconfig.json"
   },
-  "dependencies": { "@xmldom/xmldom": "^0.8.11" },
-  "devDependencies": { "@types/node": "^24.0.0", "typescript": "~5.9.3" }
+  "dependencies": {
+    "@xmldom/xmldom": "^0.8.11"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "prettier": "3.6.2",
+    "typescript": "~5.9.3"
+  }
 }
